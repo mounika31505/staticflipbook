@@ -1,102 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
+//import Table from './components/Table';
+//import TableAddress from './components/TableAddress';
+import Login from './pages/auth/Login';
+import Signup from './pages/auth/Signup';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import Reset from './pages/auth/Reset';
+import Success from './pages/auth/Success';
 
-const App = () => {
-  const [count, setCount] = useState(1)
-  const [isHovering, setIsHovering] = useState(false)
-  const handleInterval = () => {
-    setInterval(() => {
-      setCount((prevstate) => prevstate + 1)
-    }, 1000);
-  }
-  useEffect(() => {
-    //to calling the stop watch
-    handleInterval()
+const App = () => { 
+  // const [data, setData] = useState([])
+ // const [currentpage, setCurrentpage] = useState(1)
+ 
+// const handleDelete = (recordindex) => {
+    // const updateData = data.filter((val, index) => index !== recordindex);
+    // setData(updateData)
+  // }
 
-    return () => {
-
-    }
-  }, [])
-  const handleMouseEnter = () => {
-    setIsHovering(true)
-  }
-  const handleMouseLeave = () => {
-    setIsHovering(false)
-  }
-  const handleIncrement = (evnt) => {
-    if (evnt.target.name === "increment") {
-      setCount(count + 1)
-    }
-    else {
-      if (count > 0) {
-        setCount(count - 1)
-      }
-    }
-
-  }
-  return (
+  return ( //Html (JSX) handles.
+    // jsx starts
     <div className='App'>
-      <h2 style={{ color: "white", fontSize: "100px" }}>
-        {count}
+           {/* once clicks, it updates the count value */}
+      {/* its a child component add accepts props customerinfo @state:data */}
 
-      </h2>
-      <button
-
-        style={{
-          
-          fontSize: "50px",
-          padding: "20px",
-          borderRadius: "16px",
-          cursor: "pointer",
-          border: "5px solid yellow",
-          marginRight: "10px",
-
-        }}
-        className={isHovering ? "incrementhover" : "increment"}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleIncrement}
-        name="increment"
-
-
-      >
-        increment
-      </button>
-
-      <button
-
-        style={{
-          backgroundColor: isHovering ? "white" : "green",
-          fontSize: "50px",
-          padding: "20px",
-          borderRadius: "16px",
-          cursor: "pointer",
-          border: "5px solid yellow",
-          marginRight: "10px",
-
-        }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleIncrement}
-        name="decrement"
-
-
-      >
-        decrement
-      </button>
-
-
-      <button
-         
-        
-        className ='reset'
-        onClick={() => setCount(0)}
-      > reset
-      </button>
-
-
+      {/* <Table customerinfo={data} tbheading="Its customer data" />
+      <TableAddress addressinfo={data} tbheading="Customer address details" deleteRecord={handleDelete} /> */}
+      <Router>
+        <Link to="/login">Login</Link> 
+        <Link to="/signup">Signup</Link>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/forgotpassword">
+            <ForgotPassword />
+          </Route>
+          <Route path="/reset">
+            <Reset />
+          </Route>
+          <Route path="/success">
+            <Success />
+          </Route>
+        </Switch>
+      </Router>
     </div>
+    // jsx ends
   );
 };
 
+
 export default App;
+

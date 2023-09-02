@@ -1,0 +1,24 @@
+.Table{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-collapse: collapse;
+      border:darkred;
+    text-align: center;
+    width: 150%;
+  }
+  
+  td,th {
+    
+    border-width: thin;
+    text-align:center;
+    padding: 8px;
+    border-radius:0cqi;
+    border: 1px solid #0b0203d9;
+  }
+  th{
+    color:black;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  

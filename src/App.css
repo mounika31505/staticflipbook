@@ -11,7 +11,7 @@ body {
     rgb(10, 62, 207) 0%,
     rgb(50, 188, 188) 100%
   );
-  text-align: center;
+  /* text-align: center; */
 }
 
 .app-title {
@@ -28,7 +28,7 @@ body {
           cursor: pointer;
           border: 5px solid yellow;
           margin-left: 10px;
-          transition: all .4s ease-in-out;
+          transition: all .5s ease-in-out;
 }  
 .reset:hover{
   background-color: #0ccac4;
@@ -38,8 +38,16 @@ body {
   
 }
 .incrementhover{
-background-color: brown;
+background-color: rgb(16, 105, 239);
 } 
 .increment{
-background-color:fuchsia;
+background-color:rgb(173, 104, 173);
+}
+
+input.input-error,
+select.input-error{
+  border-color: #fc8181;
+}
+button :disabled{
+  opacity: 0.35;
 }
