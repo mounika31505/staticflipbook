@@ -13,7 +13,7 @@ import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Reset from './pages/auth/Reset';
 import Success from './pages/auth/Success';
-
+import Landingpage from './pages/home/Landingpage';
 const App = () => { 
   // const [data, setData] = useState([])
  // const [currentpage, setCurrentpage] = useState(1)
@@ -32,12 +32,15 @@ const App = () => {
       {/* <Table customerinfo={data} tbheading="Its customer data" />
       <TableAddress addressinfo={data} tbheading="Customer address details" deleteRecord={handleDelete} /> */}
       <Router>
-        <Link to="/login">Login</Link> 
-        <Link to="/signup">Signup</Link>
+        {/* <Link to="/login">Login</Link> 
+        <Link to="/signup">Signup</Link> */}
         <Switch>
-          <Route path="/login">
-            <Login />
+        <Route path="/"  exact>
+            <Landingpage />
           </Route>
+          <Route path="/login" component={Login} exact />
+          
+          
           <Route path="/signup">
             <Signup />
           </Route>

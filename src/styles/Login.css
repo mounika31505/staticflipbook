@@ -1,0 +1,52 @@
+.loginform {
+    /* background-color: rgb(141, 205, 205); */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-decoration: none;
+  
+    font-family:Arial, Helvetica, sans-serif;
+    background: /* linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1),  */url("../assets/images/background.jpg");
+   
+}
+.loginform form{
+    
+    width: 25vw;
+    background-color:rgba(240, 255, 255, 0.253);
+    border-radius: 1rem;
+    padding-top:1rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem ;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+.loginform form:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2);
+}
+.loginform form button{
+    cursor: pointer;
+    background-color: rgb(219, 231, 231);
+    color: black;
+    border-radius:5px;
+    padding: .5rem  1rem;
+    transition: .5s;
+    border-style: solid;
+}
+.loginform form button:hover{
+
+opacity: .9;
+}
+.loginform form button:active{
+    background-color: blue;
+}
+    
+    
+
+.loginform form input{
+    width: 100%;
+
+    padding: .6rem 0.2rem;
+}
