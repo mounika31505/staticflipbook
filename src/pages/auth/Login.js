@@ -1,8 +1,13 @@
+import React from "react";
 import { useFormik } from "formik";
 import { basicSchima } from "./schemas"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../../styles/Login.css";
-
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { useAuthContext } from "../../contexts/AuthContextProvider";
+import { NavLink } from 'react-router-dom/cjs/react-router-dom';
+import { loginform, validationcheck } from "../../helpers/utils";
+import { ToastContainer } from "react-toastify";
 
 export const initialValues = {
   email: "",
@@ -10,16 +15,26 @@ export const initialValues = {
 }
 
 const Login = () => {
+  const {toggleLogin, setToken} = useAuthContext()
 
   const [isError, setIsError] = useState(false);
+ const history = useHistory();
   document.title = "Login | Educamp"
 
   const onSubmit = async (values, actions) => {
-    console.log(values);
-    console.log(actions);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsError(true);
-    actions.resetForm()
+    // toggleLogin()
+    const mockCreds = loginform();
+   // console.log(values);
+    const resptoken = validationcheck(values,mockCreds)
+   // console.log("resptokk", resptoken)
+    if(resptoken){
+      setToken(resptoken)
+      toggleLogin();
+    }
+    // console.log(actions);
+    // await new Promise((resolve) => setTimeout(resolve, 1000));
+    // setIsError(true);
+    // actions.resetForm()
   };
 
   const { values, errors, touched, isSubmitting, handleBlur, handleChange, handleSubmit } = useFormik({
@@ -28,12 +43,12 @@ const Login = () => {
     onSubmit,
   });
 
-
-
-  console.log(values, errors);
+  if(localStorage.getItem("AuthToken")){
+    // history.push("/");
+    window.location.assign("/")
+  }
   return (
     <div className="loginform">
-
       <form className="mail" onSubmit={handleSubmit} autoComplete="off">
         <h1>Login</h1>
         <div>
@@ -47,6 +62,9 @@ const Login = () => {
             onBlur={handleBlur}
             className={errors.email && touched.email ? "input-error" : ""}
           />
+          {errors.email && touched.email ?<div>
+            {errors.email}
+          </div>:null}
         </div>
 
         <br />
@@ -66,7 +84,12 @@ const Login = () => {
         <br />
         <button disabled={isSubmitting} type="submit">Login</button>
       </form>
+      <div>
+        <NavLink to="/">Go Home</NavLink>
+      </div>
       {isError && <p style={{ color: "red" }}>Invalid credentials. please try again.</p>}
+      
+      <ToastContainer position="top-center" autoClose={4000} />
     </div>
   );
 };

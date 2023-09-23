@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
     const [isHovering, setIsHovering] = useState(false)
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]) 
     const [count, setCount] = useState(0)//creating setdata
     //setCount has the updates the value nd store it count
     const [msg, setMsg] = useState(null)

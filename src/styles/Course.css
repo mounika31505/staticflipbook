@@ -1,0 +1,11 @@
+.course{
+    height: 100vh;
+    border: none;
+
+}
+.course h1{
+    width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
