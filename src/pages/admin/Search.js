@@ -20,18 +20,20 @@ export default function Search() {
             const users = await fetchUsers(debouncedSearch);
             userinfo.setUserData(users)
 
-
-
             setLoading(false);
         };
         loadUsers();
-    }, [debouncedSearch]);
+    }, [])
+    useEffect(() => {
+        userinfo.userdata(debouncedSearch);
+    },[debouncedSearch])
     return (
         <div className="tutorial">
+                      
             <SearchBar onChange={setSearch} />
             {loading && <div>Loading...</div>}
             {!loading &&
-                userinfo.users.map((user) => {
+                userinfo?.users?.map((user) => {
                     return <div key={user.id} > {user.name}</div>
 
                 })}

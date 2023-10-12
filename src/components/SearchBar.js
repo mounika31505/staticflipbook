@@ -7,7 +7,7 @@ const SearchBar = ({onChange}) => {
     <input
     type='text'
     onChange={(e) => onChange(e.target.value)}
-    placeholder='Search users'
+    placeholder='Search.....'
   />
   )
 }

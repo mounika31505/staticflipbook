@@ -27,13 +27,30 @@ export default function SearchPost() {
 
         };
         loadUser();
-    }, [debouncedSearchPost])
+    }, [])
+
+    useEffect(() => {
+       postinfo.filterpost(debouncedSearchPost);
+
+    },[debouncedSearchPost])
 
     return (
         <div className="learning">
+            {/* <h3>post Data</h3>
+            <input 
+            type="text"
+
+            
+            placeholder="search..."
+            onChange={(e) => setSearch(e.target.value)}/> */}
             <SearchBar onChange={setSearch} />
             {loading && <div>Loading...</div>}
-            <table align='center'>
+            {!loading &&
+                postinfo?.post?.map((postitem) => {
+                    return <div key={postitem.id} > {postitem.id} <br /> {postitem.title}</div>
+
+                })}
+            {/* <table align='center'>
                 <tr>
                     <th>ID</th>
                     <th>USERID</th>
@@ -51,9 +68,8 @@ export default function SearchPost() {
                         </tr>
                     )
                 })}
-            </table>
+            </table> */}
         </div>
-
     );
 }
 

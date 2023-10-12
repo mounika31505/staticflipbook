@@ -13,6 +13,11 @@ import AuthLayout from './layouts/AuthLayout';
 import Search from './pages/admin/Search';
 import SearchPost from './pages/admin/SearchPost';
 import Counter from './components/otp/Counter';
+
+import Practice from './pages/admin/Practice';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import Signup from './pages/auth/Signup';
+
 //import Table from './components/Table';
 //import TableAddress from './components/TableAddress';
 
@@ -67,7 +72,11 @@ const App = () => {
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/search" component={Search}/>
             <Route path="/searchpost" component={SearchPost}/>
-            <Route path="/counter" componenet={Counter}/>
+            <Route path="/counter" component={Counter}/>
+           
+            <Route path="/practice" component={Practice} />
+            <Route path="/forgotpsd" component={ForgotPassword} />
+            <Route path="/signup" component={Signup} />
 
             <Route path="/" exact>
               <Landingpage />
