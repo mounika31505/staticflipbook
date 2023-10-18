@@ -9,7 +9,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 .signupform form{
-    kground-color:rgba(240, 255, 255, 0.253);
+    background-color:rgba(240, 255, 255, 0.253);
     border-radius: 1rem;
     padding-top:1rem;
     padding-bottom: 4rem;

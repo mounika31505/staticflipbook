@@ -6,11 +6,11 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
+   background: linear-gradient(
     to left,
     rgb(10, 62, 207) 0%,
     rgb(50, 188, 188) 100%
-  );
+  ); 
    text-align: center; 
 }
 

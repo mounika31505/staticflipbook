@@ -1,13 +1,17 @@
 .blog{
-    height: 100vh;
+    height: 300vh;
     border: none;
-    text-align: center;
-    background-image: url("../assets/images/banner2.jpg");
+    /* text-align: center; */
+    /* background-image: url("../assets/images/banner2.jpg"); */
 }
-.blog h1{
+.p {
+    color: red;
+    text-align: center;
+  }
+/* .blog h1{
     text-align: center;
     size: 90rem;
      font-family:'Times New Roman', Times, serif;
      
      color: darkcyan;
-}
+} */
