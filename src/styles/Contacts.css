@@ -1,0 +1,182 @@
+/* Contacts.css
+.tg{
+ height:100vh;
+ 
+  background: url("../assets/images/wp2940002-login-wallpaper.jpg");
+}
+h1{
+  color: #fff;
+  font-style:oblique;
+  font-size: 50px;
+
+}
+.form-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-content: center;
+}
+.left {
+  width: 37%;
+  height: 100%;
+}
+.left img {
+  width: 80%;
+  height: auto;
+}
+
+.right {
+  width: 57%;
+  background-color: #f2f2f2; /* Background color for the form section */
+  /* padding: 20px; /* Add padding for the form section */
+/* }
+
+ .right h1 {
+  text-align: center;
+} 
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  opacity: .9;
+  align-content: center;
+  height: 80vh;
+} */
+
+/*.input-box {
+  margin-bottom: 15px;
+  /* align-content: center; 
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.right form input ,textarea
+{
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 20%;
+  align-content:"center";
+  padding: 10px;
+  background-color: #007bff; /* Button background color 
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* Text color for the button 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Button background color on hover 
+} */
+
+
+
+
+
+/* Add this CSS to your Contacts.css file */
+
+.tg {
+  background-image: url('../assets/images/wp2940002-login-wallpaper.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+h1,h5{
+  text-align: center;
+  font-style:inherit;
+  font-weight: bold;
+}
+
+
+.form-container {
+  /* display: flex; */
+  display: grid;
+   grid-template-columns: 40% 60%;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Add rounded corners to the form container */
+  padding: 20px;
+  height: 75vh;
+  width: 75vw;
+}
+.left {
+   flex: 1; 
+   width: 100%; 
+  
+}
+.left img {
+  width: 100%;
+  height: auto;
+  
+  padding: 10px;
+}
+.right {
+  flex: 1; 
+  /* width: 60%; */
+  padding: 10px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color:transparent;
+  opacity: .8;
+  box-shadow: 0 5px 20px 0px rgba(1, 2, 2, 5);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.input-box {
+  margin-bottom: 10px;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+  align-self: center;
+}
+
+.contactsbtn {
+  width: 40%;
+  align-self: center;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.contactsbtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+

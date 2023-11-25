@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Loader from './pages/auth/Fallback';
-import About from './pages/auth/About';
+// import About from './pages/auth/About';
 import Dashboard from './pages/home/Dashboard';
 import AuthLayout from './layouts/AuthLayout';
 import Search from './pages/admin/Search';
@@ -17,6 +17,12 @@ import Practice from './pages/admin/Practice';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Signup from './pages/auth/Signup';
 import Addres from './pages/auth/Addres';
+import Calc from './calculator/Calc';
+import Todolist from './todo/Todolist';
+import TextToSpeech from './txtTospeech/TextToSpeech';
+import Footer from './components/landingpage/Footer';
+import About from './pages/auth/About';
+
 
 //import Table from './components/Table';
 //import TableAddress from './components/TableAddress';
@@ -64,10 +70,11 @@ const App = () => {
             <Route path="/reset" component={Reset} exact />
             <Route path="/success" component={Success} exact />
 
-            <Route path="/course" component={Course} exact />
+            {/* <Route path="/course" component={Course} exact /> */}
             <Route path="/blog" component={Blog} />
             <Route path="/contacts" component={Contacts} />
-            <Route path="/about" component={About} />
+             <Route path="/#about" component={About} /> 
+             
 
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/search" component={Search}/>
@@ -78,8 +85,10 @@ const App = () => {
             <Route path="/forgotpsd" component={ForgotPassword} />
             <Route path="/signup" component={Signup} />
             <Route path="/address" component={Addres} />
-           
+            <Route path="/calculator" component={Calc} />
+            <Route path="/todolist" component={Todolist} />
 
+            <Route path="/text converter" component={TextToSpeech} />
             <Route path="/" exact>
               <Landingpage />
             </Route>

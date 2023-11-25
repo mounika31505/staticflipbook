@@ -5,7 +5,7 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 export const basicSchima = yup.object().shape({
     email:yup.string().email("please enter a valid email")
     .matches(emailRegex , {message:"please enter a valid email"}) 
-    .required("Required"),
+    .required(" email Required"),
     password: yup
     .string()
     .min(5)

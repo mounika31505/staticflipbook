@@ -1,4 +1,4 @@
-forgotpswd {
+.forgotpswd {
     /* background-color: rgb(141, 205, 205); */
     height: 100vh;
     display: flex;
@@ -23,3 +23,26 @@ forgotpswd {
     padding-right: 3rem ;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+.forgotpswd form input {
+    width: 100%;
+    border-radius: 5px;
+    padding: .6rem 0.2rem;
+    border: none;
+}
+.lgbtn {
+    /* align-self: center;
+    cursor: pointer;
+    background-color: rgb(219, 231, 231);
+    color: black;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    transition: .1s;
+    border-style: solid;*/
+
+
+    margin: 10px;
+    padding: 5px;
+    width: 90%;
+    align-self: center;
+    text-align: center;
+} 

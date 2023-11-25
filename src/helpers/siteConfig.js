@@ -1,8 +1,8 @@
 const siteConfig = {
     header:{
-        title:`World's Biggest Universety` ,
-        description:`making website is one of the easiest thing in the world
-        jut need to learn HTML,CSS and Javascript and you are good to go.`,
+        title1:`Edumania`,
+        description1:`--------World's Biggest Universety--------` ,
+        description:` Ignite Your Learning Journey with Innovation and Excellence.`,
         link:{
             text:`Vist Us To know More`,
             type:`link`,
@@ -14,3 +14,5 @@ const siteConfig = {
     }
 }
 export {siteConfig}
+// `making website is one of the easiest thing in the world
+//         just need to learn HTML,CSS and Javascript and you are good to go.`

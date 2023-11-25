@@ -3,7 +3,7 @@ import { Forgotpassword } from "../../helpers/authServices";
 import Alert from "./alerts/Alert"; 
 import { STATUS_TYPES } from "../../helpers/constants/Constant";
 import { Link } from "react-router-dom/cjs/react-router-dom";
-// import "../../styles/Forgot.css"
+ import "../../styles/Forgot.css"
 
 export const BUTTON_WRAPPER_STYLES = {
   position: "relative",
@@ -72,7 +72,7 @@ return(
             placeholder="Enter email"
              />
             <div>
-              <button type="submit" size="nd" variant="accent" >Send verify link to email</button>
+              <button las type="submit" size="nd" variant="accent" >Send link </button>
             </div>
             </div>
            

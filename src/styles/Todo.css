@@ -1,0 +1,113 @@
+
+.todo-page {
+  display: flex;
+    font-family: Arial, sans-serif;
+   background: url("../assets/images/wp5740233-pastel-ps4-anime-wallpapers.jpg"); 
+    color: #333;
+    background-size: cover; 
+  }
+  .todo-container {
+    width: 95%;
+    margin: 50px auto;
+  }
+  .todo-h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .todo-form {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0px 0px 15px 5px rgb(28, 26, 27);
+    background-color: #fff;
+  }
+  .todo-items-wrap {
+    display: block;
+    margin: 20px 0;
+  }
+  .todo-input[type="date"],
+  .todo-input[type="time"],
+  .todo-textarea {
+    width: 98%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(235, 112, 112)cdc;
+    border-radius: 10px;
+  }
+  input[type="date"],
+  input[type="time"] {
+    border: none;
+  }
+  .todo-label {
+    font-weight: bold;
+  }
+  .todo-button {
+    padding: 8px;
+    background-color: #ffc8dd;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  .todo-button:hover {
+    background-color: #d34177;
+    color: white;
+  }
+  #task-list {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .task {
+    background-color: #bde0fe; 
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    border-color: #0d0d0d;
+  }
+  .task span {
+    font-weight: bold;
+  }
+  .task .delete {
+    color: rgb(235, 36, 36);
+    cursor: pointer;
+    float: right;
+  }
+  .task .edit {
+    color: #045f90;
+    cursor: pointer;
+    margin-right: 0px;
+    display: inline-block;
+    position: relative;
+  }
+  .task .edit::before {
+    content: '\270E'; 
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  .task .edit.save {
+    color: #0d0d0d;
+  }
+  .task input[type="text"] {
+    width: 80%; 
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .task .edit,
+  .task .save {
+    display: inline-block; 
+    margin-top: -30px; 
+    font-size: 15px;
+  }
+  .task .edit {
+    margin-left: 10px; 
+  }
+  .task .save {
+    margin-left: 10px; 
+  }
+  
+   

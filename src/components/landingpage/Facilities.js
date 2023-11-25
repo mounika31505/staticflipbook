@@ -4,9 +4,11 @@ import { basketbal, cafeteria, library } from '../../helpers/images'
 const Facilities = () => {
   return (
     
-            <section className="facilities">
+            <section  id="blog" className="facilities">
                 <h1>Our Facilities</h1>
-                <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                <p>Discover a world-class library, expansive playground, and delectable dining at
+                     Edumania. Our facilities enrich every aspect of student life, 
+                    fostering a well-rounded and vibrant academic experience</p>
                 <div className="row">
                     <div className="facilities-col">
                         <img src={library} alt="fac1" />

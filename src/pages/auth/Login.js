@@ -83,14 +83,14 @@ const Login = () => {
   });
 
   if (localStorage.getItem("AuthToken")) {
-    // history.push("/");
+     history.push("/");
     window.location.assign("/")
   }
   return (
     <div className="loginform">
       <form className="mail" onSubmit={handleSubmit} autoComplete="off">
         <h1>Login</h1>
-        <div>
+        <div style={{position:"relative"}}>
           <label htmlFor="email">Email</label><br />
           <input
             value={values.email}
@@ -101,7 +101,7 @@ const Login = () => {
             onBlur={handleBlur}
             className={errors.email && touched.email ? "input-error" : ""}
           />
-          {errors.email && touched.email ? <div>
+          {errors.email && touched.email ? <div style={{position:"absolute",left:"1px",bottom:"-20px" , color:"red"}}>
             {errors.email}
           </div> : null}
         </div>
@@ -122,20 +122,18 @@ const Login = () => {
 
         <br />
         <div>
-          <button disabled={isSubmitting} type="submit">Login</button>
+          <button className ="lgbtn" disabled={isSubmitting} type="submit">Login</button>
         </div>
 
         <div style={BUTTON_WRAPPER_STYLES}>
-          <button onClick={() => setIsOpen(true)}>close model</button>
+          <button className="checkbtn" onClick={() => setIsOpen(true)}>close model</button>
 
           <Alert open={isOpen} onClose={() => setIsOpen(!isOpen)} message={message}>
             {message.variant === STATUS_TYPES.error ? "Error" : "Success"}
           </Alert>
         </div>
         <div style={OTHER_CONTENT_STYLES} />
-
-
-      </form>
+        </form>
       <div>
         <NavLink to="/">Go Home</NavLink>
       </div>

@@ -10,7 +10,7 @@ export const LandingStateProvider = ({ children }) => {
     const [sitedetails, setSiteDetails] =useState(siteConfig)
 
     return (
-        <LandingStateContext.Provider>
+        <LandingStateContext.Provider value={{}}>
             {children}
         </LandingStateContext.Provider>
     )

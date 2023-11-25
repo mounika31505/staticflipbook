@@ -79,7 +79,7 @@ const Signup = () => {
             id="last_name"
             onBlur={handleBlur} /><br />
         </div>
-        <div>
+        <div style={{position:"relative"}}>
           <label htmlFor="email">Email: </label>
           <input
             value={values.email}
@@ -89,7 +89,7 @@ const Signup = () => {
             placeholder="Enter your email"
             onBlur={handleBlur}
             className={errors.email && touched.email ? "input-error" : ""} />
-          {errors.email && touched.email ? <div>
+          {errors.email && touched.email ? <div style={{position:"absolute",left:"1px",bottom:"-20px" , color:"red"}} >
             {errors.email}
           </div> : null}
         </div>
@@ -127,7 +127,7 @@ const Signup = () => {
           <br />
         </div>
         <div>
-          <button type="submit">Signup</button>
+          <button  type="submit" className="signupbtn">Signup</button>
         </div>
         <div style={BUTTON_WRAPPER_STYLES}> {/* importing from frgot pswd*/}
           <button onClick={() => setIsOpen(true)}>close model</button>
